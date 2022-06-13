@@ -42,6 +42,9 @@ form.addEventListener('submit',(e)=>{
                 weather_region.innerText = region;
                 weather_country.innerText =country;
                 weather_temp.innerText = temp;
+                
+        // Append all weather elements to weatherContainer
+                weatherContainer.append(weather_icon,weather_temp,weather_condition,weather_area,weather_region,weather_country)
         }
     })
 })
