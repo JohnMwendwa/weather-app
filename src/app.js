@@ -14,6 +14,7 @@ const port = 3000;
 // Define paths to config express
 const staticAssetsPath = path.join(__dirname,'../public');
 const viewsPath = path.join(__dirname,'../templates/views');
+const partialsPath = path.join(__dirname,'../templates/partials');
 
 // Set app to use static assets
 app.use(express.static(staticAssetsPath));
@@ -21,6 +22,7 @@ app.use(express.static(staticAssetsPath));
 // set views engine and directory
 app.set('view engine','hbs');
 app.set('views',viewsPath)
+hbs.registerPartials(partialsPath);
 
 //ROUTES
 app.get('/',(req,res)=>{
