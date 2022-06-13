@@ -21,11 +21,30 @@ app.get('/',(req,res)=>{
     res.send('Weather App')
 });
 app.get('/weather',(req,res)=>{
-    if(!req.query.address){
+    const city = req.query.address;
+    if(!city){
         return res.send({
             error:'You must provide an address'
         })
     }
+    geolocation(city,(error,{latitude,longitude}={})=>{
+        if(error){
+            return res.send({
+                error
+            })
+        }
+        forecast(latitude,longitude,(error,forecastData)=>{
+            if(error){
+                return res.send({
+                    error
+                })
+            }
+            res.send({
+                forecast:forecastData
+            })
+        })
+
+    })
 })
 
 app.listen(port,()=>{
