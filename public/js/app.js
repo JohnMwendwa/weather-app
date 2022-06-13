@@ -35,6 +35,13 @@ form.addEventListener('submit',(e)=>{
            const {city,condition,country,icon,region,temp,time} = data.forecast;  
                 // Add image src
                 weather_icon.setAttribute('src',icon);
+                
+                //Append text content
+                weather_area.innerText = city;
+                weather_condition.innerText= condition;
+                weather_region.innerText = region;
+                weather_country.innerText =country;
+                weather_temp.innerText = temp;
         }
     })
 })
