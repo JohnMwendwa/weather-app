@@ -57,6 +57,9 @@ app.get('/weather',(req,res)=>{
     })
 })
 
+app.get('*',(req,res)=>{
+    res.render('error')
+})
 app.listen(port,()=>{
     console.log(`server started on port ${port}`)
 })
