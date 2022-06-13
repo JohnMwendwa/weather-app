@@ -26,6 +26,9 @@ app.set('views',viewsPath)
 app.get('/',(req,res)=>{
     res.render('index')
 });
+app.get('/about',(req,res)=>{
+    res.render('about');
+})
 
 app.get('/weather',(req,res)=>{
     const city = req.query.address;
