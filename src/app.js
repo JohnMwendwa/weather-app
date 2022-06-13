@@ -24,8 +24,9 @@ app.set('views',viewsPath)
 
 //ROUTES
 app.get('/',(req,res)=>{
-    res.send('Weather App')
+    res.render('index')
 });
+
 app.get('/weather',(req,res)=>{
     const city = req.query.address;
     if(!city){
