@@ -3,6 +3,7 @@ const path = require('path');
 
 // NPM modules
 const express = require('express');
+const hbs =require('hbs');
 
 const geolocation = require('./utils/geolocation');
 const forecast = require('./utils/forecast');
@@ -10,11 +11,16 @@ const forecast = require('./utils/forecast');
 const app = express();
 const port = 3000;
 
-// Paths
+// Define paths to config express
 const staticAssetsPath = path.join(__dirname,'../public');
+const viewsPath = path.join(__dirname,'../templates/views');
 
 // Set app to use static assets
 app.use(express.static(staticAssetsPath));
+
+// set views engine and directory
+app.set('view engine','hbs');
+app.set('views',viewsPath)
 
 //ROUTES
 app.get('/',(req,res)=>{
