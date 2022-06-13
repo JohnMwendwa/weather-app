@@ -33,6 +33,8 @@ form.addEventListener('submit',(e)=>{
             const error = data.error;
         }else{
            const {city,condition,country,icon,region,temp,time} = data.forecast;  
+                // Add image src
+                weather_icon.setAttribute('src',icon);
         }
     })
 })
