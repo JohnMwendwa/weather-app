@@ -4,7 +4,8 @@ const path = require('path');
 // NPM modules
 const express = require('express');
 
-
+const geolocation = require('./utils/geolocation');
+const forecast = require('./utils/forecast');
 // Initialize app to use express
 const app = express();
 const port = 3000;
