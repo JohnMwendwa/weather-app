@@ -1,0 +1,29 @@
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar,.navbar__links{
+display: flex;
+}
+.navbar__links{
+    margin-top: 0;
+}
+.navbar__link{
+    list-style: none;
+    margin-right: 16px;
+}
+
+.navbar__link a{
+  text-decoration: none;  
+  color: #333;
+  font-size: 1.25rem;
+  transition: color 0.3s ease-in-out;
+}
+.navbar__link a:hover{
+    color: yellowgreen;
+}
