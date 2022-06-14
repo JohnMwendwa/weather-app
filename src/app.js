@@ -9,7 +9,7 @@ const geolocation = require('./utils/geolocation');
 const forecast = require('./utils/forecast');
 // Initialize app to use express
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Define paths to config express
 const staticAssetsPath = path.join(__dirname,'../public');
