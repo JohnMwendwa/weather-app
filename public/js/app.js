@@ -10,6 +10,7 @@ const weather_area = document.createElement('p');
 const weather_condition = document.createElement('p');
 const weather_country = document.createElement('p');
 const weather_temp = document.createElement('p');
+const weather_error = document.createElement('p');
 
        // Add classes
  weather_icon.className='weather__icon';
@@ -17,6 +18,7 @@ const weather_temp = document.createElement('p');
  weather_condition.className='weather__condition';
  weather_country.className='weather__country';
  weather_temp.className='weather__temperature';
+ weather_error.className='weather__error'
 
 
 form.addEventListener('submit',(e)=>{
