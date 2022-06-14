@@ -1,3 +1,4 @@
+// select document ellements
 const form = document.querySelector('form');
 const address = document.querySelector('.search');
 const weatherContainer = document.querySelector('.weather-container');
@@ -8,7 +9,6 @@ const weather_icon = document.createElement('img');
 const weather_area = document.createElement('p');
 const weather_condition = document.createElement('p');
 const weather_country = document.createElement('p');
-const weather_region = document.createElement('p');
 const weather_temp = document.createElement('p');
 
        // Add classes
@@ -16,7 +16,6 @@ const weather_temp = document.createElement('p');
  weather_area.className='weather__area';
  weather_condition.className='weather__condition';
  weather_country.className='weather__country';
- weather_region.className='weather__region';
  weather_temp.className='weather__temperature';
 
 
@@ -39,12 +38,11 @@ form.addEventListener('submit',(e)=>{
                 //Append text content
                 weather_area.innerText = city;
                 weather_condition.innerText= condition;
-                weather_region.innerText = region;
-                weather_country.innerText =country;
+                weather_country.innerText =`${region}, ${country}`;
                 weather_temp.innerText = temp;
                 
         // Append all weather elements to weatherContainer
-                weatherContainer.append(weather_icon,weather_temp,weather_condition,weather_area,weather_region,weather_country)
+                weatherContainer.append(weather_icon,weather_temp,weather_condition,weather_area,weather_country)
         }
     })
 })
