@@ -1,6 +1,3 @@
-require('dotenv').config({
-    path:'config/.env'
-});
 const request = require('request');
 
 //Weather API 

@@ -1,7 +1,3 @@
-// import token fron config file
-require('dotenv').config({
-    path:'config/.env'
-})
 const request = require('request');
 
 // consume API token from mapbox
