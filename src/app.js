@@ -4,6 +4,9 @@ const path = require('path');
 // NPM modules
 const express = require('express');
 const hbs =require('hbs');
+require('dotenv').config({
+    path:'config/.env'
+});
 
 const geolocation = require('./utils/geolocation');
 const forecast = require('./utils/forecast');
