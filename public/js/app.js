@@ -39,7 +39,7 @@ form.addEventListener('submit',(e)=>{
                 weather_area.innerText = city;
                 weather_condition.innerText= condition;
                 weather_country.innerText =`${region}, ${country}`;
-                weather_temp.innerText = temp;
+                weather_temp.innerHTML = `${temp} <sup>o</sup>C`;
                 
         // Append all weather elements to weatherContainer
                 weatherContainer.append(weather_icon,weather_temp,weather_condition,weather_area,weather_country)
