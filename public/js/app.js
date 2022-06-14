@@ -32,6 +32,8 @@ form.addEventListener('submit',(e)=>{
     .then(data=>{
         if(data.error){
             const error = data.error;
+            weather_error.innerText = error;
+            weatherContainer.appendChild(weather_error);
         }else{
            const {city,condition,country,icon,region,temp,time} = data.forecast;  
                 // Add image src
