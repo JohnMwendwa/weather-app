@@ -8,6 +8,9 @@ body{
     box-sizing: border-box;
     background-color: gray;
 }
+h1{
+    color: white;
+}
 
 .navbar,.navbar__links{
 display: flex;
@@ -39,4 +42,8 @@ form button{
     outline: none;
     background-color: greenyellow;
     cursor: pointer;
+    transition: 0.3s ease-out;
+}
+form button:hover{
+    background-color: #73b908;
 }
