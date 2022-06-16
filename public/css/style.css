@@ -8,6 +8,7 @@ body{
     box-sizing: border-box;
     background-color: #26734d;
     font-family: arial;
+    overflow-x: hidden;
 }
 h1{
     color: white;
@@ -67,4 +68,15 @@ form button:hover{
 .main-content{
     flex-grow: 1;
 }
-
+.footer{
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    background-color: #034624;
+    color: #fff;
+    padding: 20px 0;
+}
+.footer a{
+    text-decoration: none;
+    color: #fff;
+}
