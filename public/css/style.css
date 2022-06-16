@@ -50,4 +50,15 @@ form button:hover{
 
 .weather-container{
     text-align: center;
+    font-size: 1.25rem;
+    color: #ffffff;
+    margin-top: 10px;
+}
+.weather__temperature,.weather__condition{
+    margin-top: 0;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+.weather__condition{
+    color: #aaff00;
 }
