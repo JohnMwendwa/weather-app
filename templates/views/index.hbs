@@ -9,8 +9,15 @@
     <title>Weather app</title>
 </head>
 <body>
+
+    {{!-- Header Content Goes Here --}}
+<header>
     <h1>Weather App</h1>  
     {{>navbar}} 
+</header>
+
+{{!-- Main Content Goes Here --}}
+<div class="main-content">
     <form >
         <input type="text" class="search" placeholder="Nairobi">
         <button>Search</button>
@@ -19,6 +26,9 @@
         <div id="error"></div>
         <div id="success"></div>
     </div>
+</div>
+
+{{!-- Footer Goes Here --}}
     <script src="js/app.js"></script>
 </body>
 </html>
