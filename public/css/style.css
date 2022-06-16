@@ -47,3 +47,7 @@ form button{
 form button:hover{
     background-color: #73b908;
 }
+
+.weather-container{
+    text-align: center;
+}
