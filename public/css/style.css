@@ -63,3 +63,8 @@ form button:hover{
 .weather__condition{
     color: #aaff00;
 }
+
+.main-content{
+    flex-grow: 1;
+}
+
