@@ -2,6 +2,9 @@
 const form = document.querySelector('form');
 const address = document.querySelector('.search');
 const weatherContainer = document.querySelector('.weather-container');
+const weather_Error = document.querySelector('#error');
+const weather_Success = document.querySelector('#success');
+
 
 
    //create elements        
@@ -33,10 +36,17 @@ form.addEventListener('submit',(e)=>{
         if(data.error){
             const error = data.error;
             weather_error.innerText = error;
-            weatherContainer.appendChild(weather_error);
+            //Append error container 
+            weatherContainer.appendChild(weather_Error)
+            weather_Error.appendChild(weather_error);
+
+            // Remove previous forecast data when errors occur
+             weatherContainer.removeChild(weather_Success)
+
         }else{
             //Clear form input
-            address.value = ''
+            address.value = '';
+
            const {city,condition,country,icon,region,temp,time} = data.forecast;  
                 // Add image src
                 weather_icon.setAttribute('src',icon);
@@ -48,7 +58,9 @@ form.addEventListener('submit',(e)=>{
                 weather_temp.innerHTML = `${temp} <sup>o</sup>C`;
                 
         // Append all weather elements to weatherContainer
-                weatherContainer.append(weather_icon,weather_temp,weather_condition,weather_area,weather_country)
+                weatherContainer.appendChild(weather_Success)
+                weatherContainer.removeChild(weather_Error)
+                weather_Success.append(weather_icon,weather_temp,weather_condition,weather_area,weather_country)
         }
     })
 })
