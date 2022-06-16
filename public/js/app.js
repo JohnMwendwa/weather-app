@@ -35,6 +35,8 @@ form.addEventListener('submit',(e)=>{
             weather_error.innerText = error;
             weatherContainer.appendChild(weather_error);
         }else{
+            //Clear form input
+            address.value = ''
            const {city,condition,country,icon,region,temp,time} = data.forecast;  
                 // Add image src
                 weather_icon.setAttribute('src',icon);
