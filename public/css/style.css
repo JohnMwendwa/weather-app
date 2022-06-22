@@ -9,9 +9,9 @@ body{
     background: linear-gradient(90deg, rgba(0,11,36,0.9780287114845938) 0%, rgba(11,125,78,1) 42%, rgba(0,212,255,1) 100%); 
     font-family: arial;
     overflow-x: hidden;
+    color: white;
 }
 h1{
-    color: white;
     text-align: center;
 }
 .navbar,.navbar__links{
@@ -54,7 +54,6 @@ form button:hover{
 .weather-container{
     text-align: center;
     font-size: 1.25rem;
-    color: #ffffff;
     margin-top: 10px;
 }
 .weather__temperature,.weather__condition{
@@ -74,7 +73,6 @@ form button:hover{
     justify-content: space-around;
     width: 100vw;
     background-color:black;
-    color: #fff;
     padding: 20px 0;
 }
 .footer a{
