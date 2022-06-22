@@ -6,7 +6,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #26734d;
+    background: linear-gradient(90deg, rgba(0,11,36,0.9780287114845938) 0%, rgba(11,125,78,1) 42%, rgba(0,212,255,1) 100%); 
     font-family: arial;
     overflow-x: hidden;
 }
