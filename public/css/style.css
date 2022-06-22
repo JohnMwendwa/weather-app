@@ -79,3 +79,9 @@ form button:hover{
     text-decoration: none;
     color: #fff;
 }
+
+.about p{
+    font-size: 1.15em;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
