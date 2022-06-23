@@ -31,26 +31,32 @@ form.addEventListener('submit',(e)=>{
 
     const city = address.value;
     spinner.id='spinner';
+
+    // Clear other elements inputs
+    weather_error.innerHTML = '';
+    weather_Success.innerHTML =''
     
     fetch(`/weather?address=${city}`)
     .then(response=>response.json())
     .then(data=>{
         if(data.error){
-            spinner.id='';
-            const error = data.error;
-            weather_error.innerText = error;
-            //Append error container 
-            weatherContainer.appendChild(weather_Error)
-            weather_Error.appendChild(weather_error);
+                spinner.id='';
+                const error = data.error;
+                weather_error.innerText = error;
+                //Append error container 
+                weatherContainer.appendChild(weather_Error)
+                weather_Error.appendChild(weather_error);
 
-            // Remove previous forecast data when errors occur
-            //  weatherContainer.removeChild(weather_Success)
+                // Remove previous forecast data when errors occur
+                weather_Success.innerHTML =''
 
         }else{
+            //Clear any previous errors
+            weather_error.innerHTML= ''
             //Clear form input
-            address.value = '';
-            spinner.id=''
-           const {city,condition,country,icon,region,temp,time} = data.forecast;  
+                address.value = '';
+                spinner.id=''
+                const {city,condition,country,icon,region,temp,time} = data.forecast;  
                 // Add image src
                 weather_icon.setAttribute('src',icon);
                 
@@ -62,7 +68,6 @@ form.addEventListener('submit',(e)=>{
                 
         // Append all weather elements to weatherContainer
                 weatherContainer.appendChild(weather_Success)
-                weatherContainer.removeChild(weather_Error)
                 weather_Success.append(weather_icon,weather_temp,weather_condition,weather_area,weather_country)
         }
     })
